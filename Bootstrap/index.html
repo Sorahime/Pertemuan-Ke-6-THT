@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Bootratp</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Menggunakan font online untuk percantik:D -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap 5 CSS CDN -->
+
+  <style>
+    :root{
+      --sky-50: #E8F7FF;
+      --sky-100: #D0F0FF;
+      --sky-500: #66C7FF;
+      --sky-600: #40AFFF;
+      --accent: #0b78d1;
+    }
+
+    body{
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--sky-50), #ffffff 40%);
+      color: #0b2b3a;
+    }
+
+     header.site-header{
+      position: relative;
+      overflow: hidden;
+      color: white;
+      box-shadow: 0 6px 18px rgba(16,124,186,0.12);
+    }
+
+    header.site-header::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+       linear-gradient(rgba(102,199,255,0.35), rgba(64,175,255,0.35)),
+        url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1400&q=80'); /* gambar latar belakang pake onlen karena kalo yang biasa tidak bisa HD:'D */
+      background-size: cover;
+      background-position: center;
+      opacity: 0.75; /* Redup sekitar 75% */
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    header.site-header > .container{ position: relative; z-index: 1; }
+    .brand-title{ font-weight:600; letter-spacing:0.2px; }
+
+    .card.project-card {
+      transition: transform .18s ease, box-shadow .18s ease;
+      cursor: pointer;
+    }
+
+    .card.project-card:hover{
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 12px 30px rgba(16,124,186,0.12);
+    }
+
+    .modal-img{ width:100%; height:auto; border-radius:6px; }
+    .modal-img-sm{
+      display: block;
+      max-width: 360px; 
+      width: 60%;   
+      height: auto;
+      margin: 0 auto; 
+      border-radius: 8px;
+    }
+
+    @media (max-width: 576px){
+      .modal-img-sm{ width: 100%; max-width: 100%; }
+    }
+
+    .badge-sky{ background: linear-gradient(90deg,var(--sky-500),var(--sky-600)); color:#fff; }
+
+    .btn-sky{
+      background: linear-gradient(90deg,var(--sky-500),var(--sky-600));
+      border: none;
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(16,124,186,0.12);
+    }
+
+    footer{ color:#475d6a; }
+    .modal-img{ width:100%; height:auto; border-radius:6px; }
+  </style>
+</head>
+
+<body>
+
+    <header class="site-header py-4 mb-4">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div>
+                <h1 class="h4 mb-0 brand-title">Portofolio</h1>
+                <small class="text-white-50">Campus Project - Only</small>
+            </div>
+        
+            <nav>
+                <a href="#bio" class="text-white text-decoration-none me-3">Biodata</a>
+                <a href="#galeri" class="text-white text-decoration-none me-3">Projects</a>
+                <a href="#kontak" class="text-white text-decoration-none">Contacs</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+    <!-- Biodata -->
+    <section id="bio" class="mb-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                <div class="card shadow-sm">
+                    <img src="Profile.jpg" class="card-img-top" alt="Foto Profil">
+                        
+                    <div class="card-body text-center">
+                        <h2 class="h5 text-dark fw-bold mb-1">Shin Nikolayevich Zhukov</h2>
+                        <p class="mb-1 text-muted">AI Architect • Cyber Security</p>
+                        <div class="mt-2">
+                            <a class="btn btn-sm btn-sky" href="#kontak">Contact Me</a>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+                <h3 class="h5"><strong>About Me</strong></h3>
+                <p> I am a master's student in the Mathematical Software and Administration of Information Systems program at Lomonosov Moscow State University.
+                My focus is AI-based software development, algorithm optimization, and information systems security.
+                I am accustomed to working under pressure, completing large-scale projects in a short time, and possess strong leadership and strategic management skills. </p>
+            
+                <p><i>"The best system is the one that is invisible, yet works perfectly."</i></p>
+
+                <h4 class="h6 mt-3"><strong>Skill</strong></h4>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge badge-sky">C</span>
+                    <span class="badge badge-sky">Phyton</span>
+                    <span class="badge badge-sky">Qiskit</span>
+                    <span class="badge badge-sky">Assembly</span>
+                    <span class="badge badge-sky">UI/UX</span>
+                    <span class="badge badge-sky">Artificial Intelligence Research</span>
+                    <span class="badge badge-sky">Mechine Learning</span>
+                    <span class="badge badge-sky">Cyber Security (Threat Analysis & Pentesting)</span>
+                    <span class="badge badge-sky">Database Architecture</span>
+                    <span class="badge badge-sky">SQL</span>
+                    <span class="badge badge-sky">Applied Math</span>
+                    <span class="badge badge-sky">Mathematical Modeling</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Proyek -->
+    <section id="galeri" class="mb-5">
+        <h3 class="h5 mb-3"><strong>Project Gallery</strong></h3>
+        <div class="row g-3">
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#modalProj1">
+                    <img src="1.jpg" class="card-img-top" alt="Proyek 1">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Quantum Data Pathing Optimizer (QDPO)</h5>
+                        <p class="card-text text-muted small">Data route optimization program on quantum systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#modalProj2">
+                    <img src="2.jpg" class="card-img-top" alt="Proyek 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Sentinel-X FireWall</h5>
+                        <p class="card-text text-muted small">AI-based network security system.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#modalProj3">
+                    <img src="3.jpg" class="card-img-top" alt="Proyek 3">
+                    <div class="card-body">
+                        <h5 class="card-title">NeuraCode Engine</h5>
+                        <p class="card-text text-muted small">Machine Learning engine for code optimization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#modalProj4">
+                    <img src="4.jpg" class="card-img-top" alt="Proyek 4">
+                    <div class="card-body">
+                        <h5 class="card-title">VR Data Visualization Suite</h5>
+                        <p class="card-text text-muted small">VR-based big data visualization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#modalProj5">
+                    <img src="5.jpg" class="card-img-top" alt="Proyek 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Adaptive Smart Home System (ASHS)</h5>
+                        <p class="card-text text-muted small">Predictive smart home system.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#modalProj6">
+                    <img src="6.jpg" class="card-img-top" alt="Proyek 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Autonomous Drone Routing Logic</h5>
+                        <p class="card-text text-muted small">Standalone drone navigation without GPS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals Proyek (Didalam  card i [innernya]) -->
+    <div class="modal fade" id="modalProj1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">Quantum Data Pathing Optimizer (QDPO)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <img src="1.jpg" class="modal-img modal-img-sm img-fluid" alt="QDPO">
+            <p class="mt-3 text-muted">Data route optimization program on quantum systems to speed up information transfer up to 400% more efficiently.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            <a href="#" class="btn btn-sky">See Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalProj2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">Sentinel-X FireWall</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <img src="2.jpg" class="modal-img modal-img-sm img-fluid" alt="Sentinel-X">
+            <p class="mt-3 text-muted">An AI-based network security system that automatically detects intrusions and takes countermeasures.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            <a href="#" class="btn btn-sky">See Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalProj3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">NeuraCode Engine</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <img src="3.jpg" class="modal-img modal-img-sm img-fluid" alt="NeuraCode">
+            <p class="mt-3 text-muted">Machine Learning engine that optimizes developer algorithms.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            <a href="#" class="btn btn-sky">See Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalProj4" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">VR Data Visualization Suite</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <img src="4.jpg" class="modal-img modal-img-sm img-fluid" alt="VR Suite">
+            <p class="mt-3 text-muted">VR-based big data visualization tool for real-time 3D analysis.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            <a href="#" class="btn btn-sky">See Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalProj5" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">Adaptive Smart Home System (ASHS)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <img src="5.jpg" class="modal-img modal-img-sm img-fluid" alt="ASHS">
+            <p class="mt-3 text-muted">Smart home system with predictive AI that learns occupants' routines.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            <a href="#" class="btn btn-sky">See Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalProj6" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">Autonomous Drone Routing Logic</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <img src="6.jpg" class="modal-img modal-img-sm img-fluid" alt="Drone Routing">
+            <p class="mt-3 text-muted">An AI-based drone navigation system capable of planning a path independently without GPS.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            <a href="#" class="btn btn-sky">See Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal gambar -->
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="imgModalLabel">Project</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="" alt="" id="modalImage" class="modal-img">
+            <p class="mt-3 text-muted" id="modalDesc">Project and technology description.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            <a href="#" class="btn btn-sky">See Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kontak -->
+    <section id="kontak" class="mb-5">
+        <h3 class="h5 mb-3"><strong>Contact</strong></h3>
+        <div class="row">
+            <div class="col-12 col-md-6 mb-3">
+                <form  action="#top" method="get">
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="nama" placeholder="Your Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Example@domain.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pesan" class="form-label">Message</label>
+                        <textarea class="form-control" id="pesan" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-sky" aria-label="Send Message">
+                            <span>Send</span>
+                        </button>
+                        
+                        <button type="reset" class="btn btn-outline-secondary" aria-label="Reset form">
+                            <span>Reset</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        
+
+            <div class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Contact Info</strong></h5>
+
+                        <div class="accordion" id="infoAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Address</button>
+                                </h2>
+                            
+                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+                                    <div class="accordion-body">Moscow, Russia — Student Research Zone, Lomonosov Moscow State University</div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Phone Number & Email</button>
+                                </h2>
+
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+                                    <div class="accordion-body">
+                                        <p class="mb-1"><strong>Telepon:</strong> +7 (812) 345-6789</p>
+                                        <p class="mb-0"><strong>Email:</strong> shin.zh.ukov@msu-student.ru</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="bg-light py-3 mt-4">
+        <div class="container text-center small text-muted">© 2025 Portofolio — Shin Nikolayevich Zhukov</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
