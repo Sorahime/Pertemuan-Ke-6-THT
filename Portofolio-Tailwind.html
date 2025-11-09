@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Tailwind</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: "Poppins", sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-sky-50 to-white text-slate-800">
+
+    <!-- Header -->
+    <header class="relative text-white shadow-lg overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1400&q=80')] bg-cover bg-center opacity-70"></div>
+        <div class="absolute inset-0 bg-sky-600/50"></div>
+
+        <div class="relative container mx-auto flex justify-between items-center py-4 px-4">
+            <div>
+                <h1 class="text-xl font-semibold tracking-wide">Portofolio</h1>
+                <p class="text-sm text-sky-100">Campus Project - Only</p>
+            </div>
+      
+            <nav class="space-x-4">
+                <a href="#bio" class="hover:underline">Biodata</a>
+                <a href="#galeri" class="hover:underline">Projects</a>
+                <a href="#kontak" class="hover:underline">Contacts</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container mx-auto p-4">
+
+        <!-- Biodata -->
+        <section id="bio" class="mb-10">
+            <div class="md:flex md:space-x-6 items-center">
+            
+                <!-- Foto -->
+                <div class="md:w-1/3 mb-4 md:mb-0">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="Profile.jpg" alt="Foto Profil" class="w-full h-auto">
+                        <div class="p-4 text-center">
+                            <h2 class="text-xl font-semibold text-sky-700 mb-1">Shin Nikolayevich Zhukov</h2>
+                            <p class="text-gray-500 mb-3">AI Architect • Cyber Security</p>
+                            <a href="#kontak" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-md shadow">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio -->
+                <div class="md:w-2/3">
+                    <h3 class="text-lg font-semibold mb-2">About Me</h3>
+                    <p class="text-gray-700 mb-3">I am a master's student in the Mathematical Software and Administration of Information Systems 
+                    program at Lomonosov Moscow State University. My focus is AI-based software development, algorithm optimization, 
+                    and information systems security.</p>
+                    
+                    <p class="italic text-gray-600 mb-3">"The best system is the one that is invisible, yet works perfectly."</p>
+
+                    <h4 class="text-md font-semibold mt-4 mb-2">Skill</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">C</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">Qiskit</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">Assembly</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">UI/UX</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">AI Research</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">Machine Learning</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">Cyber Security</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">Database Architecture</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">SQL</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">Applied Math</span>
+                        <span class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full">Mathematical Modeling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeri -->
+        <section id="galeri" class="mb-10">
+            <h3 class="text-lg font-semibold mb-4">Project Gallery</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+                <!-- Card Template -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:-translate-y-1 transition">
+                    <img src="1.jpg" alt="QDPO" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800 mb-1">Quantum Data Pathing Optimizer</h4>
+                        <p class="text-gray-500 text-sm">Data route optimization program on quantum systems.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:-translate-y-1 transition">
+                    <img src="2.jpg" alt="Sentinel-X" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800 mb-1">Sentinel-X Firewall</h4>
+                        <p class="text-gray-500 text-sm">AI-based network security system.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:-translate-y-1 transition">
+                    <img src="3.jpg" alt="NeuraCode" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                    <h4 class="font-semibold text-gray-800 mb-1">NeuraCode Engine</h4>
+                    <p class="text-gray-500 text-sm">Machine Learning engine for code optimization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak" class="mb-10">
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <div class="md:flex md:space-x-6">
+                
+                <!-- Form -->
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <form action="#" method="get" class="space-y-4">
+                        <div>
+                            <label for="nama" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                            <input id="nama" type="text" placeholder="Your Name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-sky-300">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                            <input id="email" type="email" placeholder="Example@domain.com" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-sky-300">
+                        </div>
+
+                        <div>
+                            <label for="pesan" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                            <textarea id="pesan" rows="4" placeholder="Your Message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-sky-300"></textarea>
+                        </div>
+
+                        <div class="flex space-x-2">
+                            <button type="submit" class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-sky-300">
+                                Send
+                            </button>
+                            
+                            <button type="reset" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-gray-300">
+                                Reset
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Info -->
+                <div class="md:w-1/2">
+                    <div class="bg-white shadow-md rounded-lg p-5">
+                        <h5 class="font-semibold mb-3">Contact Info</h5>
+                        <details class="mb-2">
+                            <summary class="cursor-pointer font-semibold text-sky-600">Address</summary>
+                            <p class="text-gray-600 mt-1 text-sm">Moscow, Russia — Lomonosov MSU Research Zone</p>
+                        </details>
+                        
+                        <details>
+                            <summary class="cursor-pointer font-semibold text-sky-600">Phone & Email</summary>
+                            <p class="text-gray-600 mt-1 text-sm"><strong>Phone:</strong> +7 (812) 345-6789</p>
+                            <p class="text-gray-600 text-sm"><strong>Email:</strong> shin.zh.ukov@msu-student.ru</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-50 py-4 text-center text-gray-500 text-sm">
+        © 2025 Portofolio — Shin Nikolayevich Zhukov
+    </footer>
+</body>
+</html>
